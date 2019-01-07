@@ -1,0 +1,53 @@
+<div class="card mt-5">
+    <div class="card-body">
+      <form #minerForm="ngForm" (ngSubmit)="onSubmit(minerForm)">
+        <input type="hidden" name="$key" #key="ngModel" [(ngModel)]="minerService.selectedMiner.$key">  
+        <div class="form-group">
+              <input type="text"
+              class="form-control"
+              name="ci"
+              #ci="ngModel"
+              [(ngModel)]="minerService.selectedMiner.ci"
+              placeholder="Agregue el CI"
+              >
+          </div>
+          <div class="form-group">
+              <input type="number"
+              class="form-control"
+              name="file"
+              #file="ngModel"
+              [(ngModel)]="minerService.selectedMiner.file"
+              placeholder="Agregue el número de File"
+              >
+          </div>
+          <div class="form-group">
+              <input type="text"
+              class="form-control"
+              name="name"
+              #name="ngModel"
+              [(ngModel)]="minerService.selectedMiner.name"
+              placeholder="Agregue el Nombre"
+              >
+          </div>
+          <div class="form-group">
+              <input type="text"
+              class="form-control"
+              name="lastname"
+              #lastname="ngModel"
+              [(ngModel)]="minerService.selectedMiner.lastname"
+              placeholder="Agregue los apellidos"
+              >
+          </div>
+           <div class="form-group">
+              <button class="btn btn-primary" type="submit">
+                  <i class="fas fa-plus-circle"></i> Adicionar
+              </button> 
+              &nbsp; &nbsp; 
+               <button class="btn btn-secondary" type="reset" (click)="resetForm(minerForm)">
+                <i class="fas fa-sync-alt"></i> Limpiar
+               </button>
+           </div>
+      </form>
+    </div>
+       
+    </div>

@@ -1,0 +1,28 @@
+<div class="card mt-5">
+  <div class="card-body">
+    <h6 class="text-center">Listado de Mineros</h6>
+  <table class="table-table-sm table-hover"></table>
+  <thead>
+      <tr>
+        <th>Código  </th>
+        <th> Nombres</th>
+        <th> Apellidos</th> 
+      </tr>
+    </thead>
+  <tbody>
+    <tr *ngFor="let miner of minerList">
+    <td>{{miner.file}}</td>
+    <td>{{miner.name}}</td>
+    <td>{{miner.lastname}}</td>
+    <td>
+      <a class="btn btn-secondary text-white" (click)= "onEdit(miner)" >
+        <i class="far fa-edit"></i>
+      </a>
+        <a class="btn btn-danger text-white" (click)="onDelete(miner.$key)">
+          <i class="fas fa-trash-alt"></i>
+        </a>  
+    </td>
+    </tr>
+  </tbody>
+  </div>
+</div>
